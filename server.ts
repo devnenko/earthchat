@@ -25,6 +25,12 @@ app.get('*', (req: any, res: any, next: any) => {
 //add files to website
 app.use(express.static(path.join(__dirname, 'build')));
 
+//limit each IP to 100 requests per 5 minutes
+const limiter = rateLimit({
+    windowMs: 5 * 60 * 1000,
+    limit: 100,
+}) 
+app.use(limiter)
 
 
 //Declare server data ------------------------------------------------
