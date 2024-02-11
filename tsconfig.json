@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "NodeNext",
+    "sourceMap": false,
+    "outDir": "build",
+    "moduleResolution": "NodeNext",
+    "strict": true
+  },
+  "files": [
+    "server.ts"
+  ]
+}  

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <title>EarthChat</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="../src/main.ts" type="module"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="earth.ico">
+
+</head>
+
+<body class="bg-gray fill" style="margin: 0;">
+    <div id="loadingScreen" class="bg-gray fill txt"
+        style=" position: fixed; z-index: 20;  font-size: 65px; text-align: center; visibility: hidden;"> 
+        <div class="center flex-col" style=" gap: 20px; align-items: center;">
+            EarthChat
+            <div
+                style="height: 10px; width: 80%;  border-radius: 3px; border: solid; border-width: 2px; border-color: white;overflow: hidden; ">
+                <div id="loadProgress" style="height: 100%; background-color: white; width: 0px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="day" class="txt fixed" style=" top: 15px; left: 15px; font-size: 3rem; ">
+        Earth
+    </div>
+    <div id="earthLink" class="txt fixed" style=" top: 15px; right: 15px; font-size: 2.5rem; visibility: hidden; ">
+        earthchat.io
+    </div>
+    <button id="soundBt" class=" fixed control-bt" style=" right: 15px; top: 15px; z-index: 10;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
+            <g fill="none" stroke="white" stroke-linecap="round" stroke-width="2">
+                <path d="m22 15l-6-6m6 0l-6 6" />
+                <path stroke-linejoin="round"
+                    d="M2 14.959V9.04C2 8.466 2.448 8 3 8h3.586a.98.98 0 0 0 .707-.305l3-3.388c.63-.656 1.707-.191 1.707.736v13.914c0 .934-1.09 1.395-1.716.726l-2.99-3.369A.98.98 0 0 0 6.578 16H3c-.552 0-1-.466-1-1.041" />
+            </g>
+        </svg>
+    </button>
+    <button id="autoRotateBt" class="fixed control-bt" style=" right: 70px; top: 15px; z-index: 10;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
+            <path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 19V5" />
+        </svg>
+    </button>
+    <div id="onlineAmount" class="txt fixed" style=" top: 72px; left: 17px; font-size: large;">
+        0 Online
+    </div>
+
+
+    <audio src="space_music.mp3"  loop ></audio>
+</body>
+</html> 
