@@ -61,7 +61,7 @@ export class MsgRenderer {
         const obj = new CSS2DObject(wrapper);
         obj.position.add(getCoordinateLocation(lat, lon, 1))
         obj.center.set(0.5, 1.27);
-        this.scene.add(obj);
+        this.scene.add(obj); 
 
 
 
@@ -203,11 +203,13 @@ export class MsgRenderer {
                 let sound = new THREE.PositionalAudio(listener);
                 audioLoader.load(soundUrl, function (buffer) {
                     sound.setBuffer(buffer)
-                    sound.setVolume(0.2)
+                    sound.setVolume(0.4)
                     sound.setRefDistance(1);
+                    sounds.push(sound)
                 });
             })
         }
+
 
         return sounds;
     }

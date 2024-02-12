@@ -134,7 +134,7 @@ function getMsgDuration() {
     } else if (messages.length > 2) {
         duration = 20000
     } else {
-        duration = 40000
+        duration = 3*60*1000
     }
     return duration;
 }
