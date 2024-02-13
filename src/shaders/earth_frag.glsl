@@ -25,7 +25,7 @@ void main() {
     vec4 dayShaded = flattenVec4(dayBase * dayIntensity);
 
     //render night part
-    float nightIntensity =flattenFloat(1.0-dayIntensity);
+    float nightIntensity =flattenFloat((1.0-dayIntensity-0.9))*5.0;
     vec4 nightBase = texture2D(uNight, vUv);
     vec4 nightShaded = flattenVec4(nightBase * nightIntensity);
 
