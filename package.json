@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "ts-node server.ts",
-    "build": "parcel build --no-source-maps",
+    "build": "parcel build",
     "dev": "concurrently --kill-others \"nodemon server.ts\" \"parcel watch --no-source-maps\""
   },
   "targets": {
@@ -22,6 +22,8 @@
     "http": "^0.0.1-security",
     "sanitize-html": "^2.11.0",
     "socket.io": "^4.7.4",
+    "socket.io-client": "^4.8.1",
+    "three": "^0.179.1",
     "ts-node": "^10.9.2",
     "xss": "^1.0.14"
   },
