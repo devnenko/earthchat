@@ -1,4 +1,4 @@
-A 3D Earth Website with realtime spatial chat.
+A 3D Earth with realtime geoaccurate chat bubbles.
 
 # EarthChat
 Run "npm install" in main and src folder separately and youre ready to go
