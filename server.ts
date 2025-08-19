@@ -1,5 +1,5 @@
 const express = require('express');
-const path = require('path')
+
 import { createServer } from 'http'
 import { Server, Socket } from "socket.io"
 import { profanity } from '@2toad/profanity';
