@@ -15,6 +15,8 @@ app.set('trust proxy', 1)
 
 app.get("/ipinfo", async (req:any, res:any) => {
   try {
+    req.set("Access-Control-Allow-Origin", "*"); // allow frontend
+    res.set("Access-Control-Allow-Origin", "*"); // allow frontend
     const response = await fetch("https://freeipapi.com/api/json/");
     const data = await response.json();
 
