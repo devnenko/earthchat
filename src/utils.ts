@@ -20,7 +20,9 @@ export function cursorGrab() {
 export async function getIpLocation() {
 
 
-    let coordinates: { latitude: number, longitude: number } = await (await fetch("https://freeipapi.com/api/json/")).json()
+  let coordinates: { latitude: number; longitude: number } = await (
+    await fetch("/ipinfo")
+  ).json();
 
 
     if (!coordinates.latitude) {

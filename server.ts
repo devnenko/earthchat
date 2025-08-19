@@ -9,6 +9,31 @@ import xss from "xss";
 //Setup server ------------------------------------------------
 const app = express();
 const server = createServer(app);
+
+
+app.set('trust proxy', 1)
+
+app.get("/ipinfo", async (req:any, res:any) => {
+  try {
+    const response = await fetch("https://freeipapi.com/api/json/");
+    const data = await response.json();
+
+    res.set("Access-Control-Allow-Origin", "*"); // allow frontend
+    res.json(data);
+  } catch (err) {
+    res.status(500).json({ error: "Failed to fetch IP info" });
+  }
+});
+
+// Handle preflight requests
+app.options("/ipinfo", (req:any, res:any) => {
+  res.set("Access-Control-Allow-Origin", "*");
+  res.set("Access-Control-Allow-Methods", "GET, OPTIONS");
+  res.set("Access-Control-Allow-Headers", "Content-Type");
+  res.sendStatus(204);
+});
+
+
 server.listen(8080, () => {
     console.log('listening on *:8080');
 });
